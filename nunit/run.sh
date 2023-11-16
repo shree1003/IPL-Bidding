@@ -13,7 +13,7 @@ then
         cp -r /home/coder/project/workspace/nunit/test/TestProject /home/coder/project/workspace/;
     cd /home/coder/project/workspace/TestProject || exit;
      dotnet clean;    
-     dotnet test;
+     dotnet build && dotnet test -l "console;verbosity=normal";
     else
         echo "Week2_Day1_Player_Properties_Age_ReturnExpectedDataTypes_Int FAILED";
         echo "Week2_Day1_Player_Properties_Id_ReturnExpectedDataTypes_int FAILED";
